@@ -1,0 +1,66 @@
+@import url('../../../variables.css');
+
+.select-input {
+    display: grid;
+    grid-template-rows: 1fr;
+    font-family: var(--font-family);
+}
+
+.select-input * {
+    --form-selectinput-font-size: 1.2rem;
+}
+
+.labelled {
+    grid-template-rows: var(--form-textinput-font-size) 1fr;
+}
+
+label {
+	font-size: var(--form-selectinput-font-size);
+}
+
+select {
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-ms-appearance:none;
+	appearance:none;
+	outline:0;
+	// border: 0 !important;
+	box-shadow:none;
+	border: 1px solid rgba(var(--primary-light-rgb), 1);
+	background: rgba(var(--primary-xdark-rgb), 1);
+	background-image: none;
+	flex: 1;
+	padding: 0 .5em;
+	color: rgba(var(--primary-light-rgb), 1);
+	cursor:pointer;
+	font-size: 1em;
+	font-family: 'Open Sans', sans-serif;
+ }
+ select::-ms-expand {
+	display: none;
+ }
+ .select {
+	position: relative;
+	display: flex;
+	width: 20em;
+	height: 3em;
+	line-height: 3;
+	background: rgba(var(--primary-rgb), 1);
+	overflow: hidden;
+	border-radius: .25em;
+ }
+ .select::after {
+	content: '\25BC';
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 1em;
+	background: rgba(var(--primary-dark-rgb), 1);
+	cursor:pointer;
+	pointer-events:none;
+	transition:.25s all ease;
+	border: 1px solid rgba(var(--primary-light-rgb), 1);
+ }
+ .select:hover::after {
+	color: var(--primary-xlight-rgb);
+ }

@@ -1,0 +1,207 @@
+/**
+ * WHAT IS THIS FILE?
+ *
+ * Globally applied styles. No matter which components are in the page or matching route,
+ * the styles in here will be applied to the Document, without any sort of CSS scoping.
+ *
+ */
+ @import url(variables.css);
+
+ @font-face {
+  font-family: Cyber;
+  src: url("/fonts/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+
+:root {
+}
+
+/* Apply these as close to the root / <body> tag */
+.color-blue {
+  --primary: var(--blue-color);
+  --primary-light: var(--blue-color-light);
+  --primary-dark: var(--blue-color-dark);
+  --primary-xdark: var(--blue-color-xdark);
+  --primary-rgb: var(--blue-color-rgb);
+  --primary-xlight-rgb: var(--blue-color-xlight-rgb);
+  --primary-light-rgb: var(--blue-color-light-rgb);
+  --primary-dark-rgb: var(--blue-color-dark-rgb);
+  --primary-xdark-rgb: var(--blue-color-xdark-rgb);
+}
+
+.color-red {
+  --primary: var(--red-color);
+  --primary-light: var(--red-color-light);
+  --primary-dark: var(--red-color-dark);
+  --primary-xdark: var(--red-color-xdark);
+  --primary-rgb: var(--red-color-rgb);
+  --primary-xlight-rgb: var(--red-color-xlight-rgb);
+  --primary-light-rgb: var(--red-color-light-rgb);
+  --primary-dark-rgb: var(--red-color-dark-rgb);
+  --primary-xdark-rgb: var(--red-color-xdark-rgb);
+}
+
+.color-orange {
+  --primary: var(--orange-color);
+  --primary-light: var(--orange-color-light);
+  --primary-dark: var(--orange-color-dark);
+  --primary-xdark: var(--orange-color-xdark);
+  --primary-rgb: var(--orange-color-rgb);
+  --primary-xlight-rgb: var(--orange-color-xlight-rgb);
+  --primary-light-rgb: var(--orange-color-light-rgb);
+  --primary-dark-rgb: var(--orange-color-dark-rgb);
+  --primary-xdark-rgb: var(--orange-color-xdark-rgb);
+}
+
+.color-yellow {
+  --primary: var(--yellow-color);
+  --primary-light: var(--yellow-color-light);
+  --primary-dark: var(--yellow-color-dark);
+  --primary-xdark: var(--yellow-color-xdark);
+  --primary-rgb: var(--yellow-color-rgb);
+  --primary-xlight-rgb: var(--yellow-color-xlight-rgb);
+  --primary-light-rgb: var(--yellow-color-light-rgb);
+  --primary-dark-rgb: var(--yellow-color-dark-rgb);
+  --primary-xdark-rgb: var(--yellow-color-xdark-rgb);  
+}
+
+.color-green {
+  --primary: var(--green-color);
+  --primary-rgb: var(--green-color-rgb);
+  --primary-light: var(--green-color-light);
+  --primary-light-rgb: var(--green-color-light-rgb);
+  --primary-xlight: var(--green-color-xlight);
+  --primary-xlight-rgb: var(--green-color-xlight-rgb);
+  --primary-dark: var(--green-color-dark);
+  --primary-dark-rgb: var(--green-color-dark-rgb);
+  --primary-xdark: var(--green-color-xdark);
+  --primary-xdark-rgb: var(--green-color-xdark-rgb);
+}
+
+.color-purple {
+  --primary: var(--purple-color);
+  --primary-light: var(--purple-color-light);
+  --primary-dark: var(--purple-color-dark);
+  --primary-xdark: var(--purple-color-xdark);
+  --primary-rgb: var(--purple-color-rgb);
+  --primary-xlight-rgb: var(--purple-color-xlight-rgb);
+  --primary-light-rgb: var(--purple-color-light-rgb);
+  --primary-dark-rgb: var(--purple-color-dark-rgb);
+  --primary-xdark-rgb: var(--purple-color-xdark-rgb);
+}
+
+.color-neon {
+  --primary: var(--neon-color);
+  --primary-light: var(--neon-color-light);
+  --primary-dark: var(--neon-color-dark);
+  --primary-xdark: var(--neon-color-xdark);
+  --primary-rgb: var(--neon-color-rgb);
+  --primary-xlight-rgb: var(--neon-color-xlight-rgb);
+  --primary-light-rgb: var(--neon-color-light-rgb);
+  --primary-dark-rgb: var(--neon-color-dark-rgb);
+  --primary-xdark-rgb: var(--neon-color-xdark-rgb);
+}
+
+.color-black {
+  --primary: var(--black-color);
+  --primary-light: var(--black-color-light);
+  --primary-dark: var(--black-color-dark);
+  --primary-xdark: var(--black-color-xdark);
+  --primary-rgb: var(--black-color-rgb);
+  --primary-xlight-rgb: var(--black-color-xlight-rgb);
+  --primary-light-rgb: var(--black-color-light-rgb);
+  --primary-dark-rgb: var(--black-color-dark-rgb);
+  --primary-xdark-rgb: var(--black-color-xdark-rgb);
+}
+
+body {
+  font-family: var(--font-family);
+  padding: 20px 20px 40px 20px;
+
+  * {
+    color: var(--primary-dark);
+  }
+}
+
+main {
+  margin: 0 auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+
+    * {
+      color: var(--primary-light);
+    }
+  }
+
+  body a {
+    color: #809fff;
+  }
+}
+
+
+
+
+// main {
+//   display: grid;
+//   grid-template-columns: 1fr 3fr;
+//   grid-gap: 20px;
+// }
+
+// .side__menu {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   height: 100%;
+// }
+
+.side__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side__list li {
+  margin-bottom: 10px;
+}
+
+.side__list li a {
+  color: var(--primary-light);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* strong {
+  text-shadow: 0px 0px 10px rgba(var(--primary-light-rgb), 1);
+}
+
+
+ */
+
+strong {
+  text-shadow: 2px 2px 5px var(--primary-light);
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 2px rgba(var(--primary-light-rgb), 0.3), 0 0 4px rgba(var(--primary-light-rgb), 0.3),
+      0 0 6px rgba(var(--primary-light-rgb), 0.3), 0 0 8px rgba(var(--primary-light-rgb), 0.3),
+      0 0 10px rgba(var(--primary-light-rgb), 0.3), 0 0 12px rgba(var(--primary-light-rgb), 0.3),
+      0 0 14px rgba(var(--primary-light-rgb), 0.3);
+  }
+  100% {
+    text-shadow: 0 0 4px rgba(var(--primary-light-rgb), 0.3), 0 0 6px rgba(var(--primary-light-rgb), 0.3),
+      0 0 8px rgba(var(--primary-light-rgb), 0.3), 0 0 10px rgba(var(--primary-light-rgb), 0.3),
+      0 0 12px rgba(var(--primary-light-rgb), 0.3), 0 0 14px rgba(var(--primary-light-rgb), 0.3),
+      0 0 16px rgba(var(--primary-light-rgb), 0.3);
+  }
+}
+

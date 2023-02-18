@@ -1,0 +1,113 @@
+:root {
+    /* Colors */
+    /* --border-color: rgb(138, 230, 110);
+    --border-color-rgb: 138, 230, 110;
+ */
+    --yellow-color: rgb(249, 240, 2);
+    --yellow-color-rgb: 249, 240, 2;
+    --yellow-color-xlight: rgb(255, 252, 169);
+    --yellow-color-xlight-rgb: 255, 252, 169;
+    --yellow-color-light: rgb(255, 250, 91);
+    --yellow-color-light-rgb: 255, 250, 91;
+    --yellow-color-dark: rgb(214, 207, 0);
+    --yellow-color-dark-rgb: 214, 207, 0;
+    --yellow-color-xdark: rgb(177, 171, 0);
+    --yellow-color-xdark-rgb: 177, 171, 0;
+
+    --orange-color: rgb(255, 152, 0);
+    --orange-color-rgb: 255, 152, 0;
+    --orange-color-xlight: rgb(247, 184, 91);
+    --orange-color-xlight-rgb: 247, 184, 91;
+    --orange-color-light: rgb(255, 174, 53);
+    --orange-color-light-rgb: 255, 174, 53;
+    --orange-color-dark: rgb(207, 124, 0);
+    --orange-color-dark-rgb: 207, 124, 0;
+    --orange-color-xdark: rgb(161, 98, 2);
+    --orange-color-xdark-rgb: 161, 98, 2;
+
+    --red-color: rgb(255, 0, 60);
+    --red-color-rgb: 255, 0, 60;
+    --red-color-xlight: rgb(252, 106, 140);
+    --red-color-xlight-rgb: 252, 106, 140;
+    --red-color-light: rgb(255, 57, 103);
+    --red-color-light-rgb: 255, 57, 103;
+    --red-color-dark: rgb(204, 0, 48);
+    --red-color-dark-rgb: 204, 0, 48;
+    --red-color-xdark: rgb(134, 0, 31);
+    --red-color-xdark-rgb: 134, 0, 31;
+
+    --blue-color-xlight: rgb(183, 241, 255);
+    --blue-color-xlight-rgb: 183, 241, 255;
+    --blue-color-light: rgb(106, 214, 241);
+    --blue-color-light-rgb: 106, 214, 241;
+    --blue-color: rgb(12, 95, 116);
+    --blue-color-rgb: 12, 95, 116;
+    --blue-color-dark: rgb(15, 74, 88);
+    --blue-color-dark-rgb: 15, 74, 88;
+    --blue-color-xdark: rgb(4, 37, 45);
+    --blue-color-xdark-rgb: 4, 37, 45;
+
+    --green-color: rgb(41, 141, 41);
+    --green-color-rgb: 41, 141, 41;
+    --green-color-xlight: rgb(99, 194, 99);
+    --green-color-xlight-rgb: 99, 194, 99;
+    --green-color-light: rgb(63, 172, 63);
+    --green-color-light-rgb: 63, 172, 63;
+    --green-color-dark: rgb(26, 117, 26);
+    --green-color-dark-rgb: 26, 117, 26;
+    --green-color-xdark: rgb(14, 87, 14);
+    --green-color-xdark-rgb: 14, 87, 14;
+
+    --purple-color: rgb(144, 5, 144);
+    --purple-color-rgb: 144, 5, 144;
+    --purple-color-xlight: rgb(202, 60, 202);
+    --purple-color-xlight-rgb: 202, 60, 202;
+    --purple-color-light: rgb(169, 19, 169);
+    --purple-color-light-rgb: 169, 19, 169;
+    --purple-color-dark: rgb(115, 11, 115);
+    --purple-color-dark-rgb: 115, 11, 115;
+    --purple-color-xdark: rgb(87, 6, 87);
+    --purple-color-xdark-rgb: 87, 6, 87;
+
+    --neon-color: rgb(57, 255, 20);
+    --neon-color-rgb: 57, 255, 20;
+    --neon-color-xlight: rgb(129, 252, 107);
+    --neon-color-xlight-rgb: 129, 252, 107;
+    --neon-color-light: rgb(102, 255, 75);
+    --neon-color-light-rgb: 102, 255, 75;
+    --neon-color-dark: rgb(31, 188, 3);
+    --neon-color-dark-rgb: 31, 188, 3;
+    --neon-color-xdark: rgb(21, 143, 0);
+    --neon-color-xdark-rgb: 21, 143, 0;
+
+    --black-color: rgb(34, 34, 34);
+    --black-color-rgb: 34, 34, 34;
+    --black-color-xlight: rgb(85, 85, 85);
+    --black-color-xlight-rgb: 85, 85, 85;
+    --black-color-light: rgb(65, 65, 65);
+    --black-color-light-rgb: 65, 65, 65;
+    --black-color-dark: rgb(22, 22, 22);
+    --black-color-dark-rgb: 22, 22, 22;
+    --black-color-xdark: rgb(0, 0, 0);
+    --black-color-xdark-rgb: 0, 0, 0;
+
+    /* Color Definitions */
+    --primary: var(--blue-color);
+    --primary-light: var(--blue-color-light);
+    --primary-dark: var(--blue-color-dark);
+    --primary-xdark: var(--blue-color-xdark);
+    --primary-rgb: var(--blue-color-rgb);
+    --primary-xlight-rgb: var(--blue-color-xlight-rgb);
+    --primary-light-rgb: var(--blue-color-light-rgb);
+    --primary-dark-rgb: var(--blue-color-dark-rgb);
+    --primary-xdark-rgb: var(--blue-color-xdark-rgb);
+
+    /* Controls */
+    --padding-small: 10px;
+    --padding-medium: 20px;
+    --padding-large: 30px;
+    --padding: var(--padding-medium);
+
+    /* Typography */
+    --font-family: Cyber, Verdana, Geneva, Tahoma, sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}

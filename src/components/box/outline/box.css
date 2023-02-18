@@ -1,0 +1,33 @@
+
+@import url('../../../variables.css');
+
+:root, .asection {
+  --box-outline-color-rgb: var(--primary-light-rgb);
+  --box-filled-color-rgb: var(--primary-xdark-rgb);
+}
+
+.asection {
+    padding: var(--padding);
+    background-color: transparent;
+    outline: 1px solid rgba(var(--box-outline-color-rgb), 1);
+    clip-path: var(--clip);
+    position: relative;
+    margin: 10px;
+    box-shadow: 0 0 20px;
+  }
+
+/* Shadow styles */
+.active {
+  outline: 1px solid rgba(var(--box-outline-color-rgb), 1);
+}
+.flat {
+  /* No shadow */
+  outline: 1px solid rgba(var(--box-outline-color-rgb), 1);
+  box-shadow: 0 0 0;
+}
+
+/* Background styles */
+.filled {
+  /* solid color */
+  background-color: rgba(var(--box-filled-color-rgb), 1);
+}

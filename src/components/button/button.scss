@@ -1,0 +1,181 @@
+@import url('../../variables.css');
+
+button, a {
+  position: relative;
+  display: inline-block;
+  padding: 25px 30px;
+  margin: 40px 0;
+  color: var(--primary-light);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+ background: transparent;
+ border: 0;
+ font-family: Cyber;
+}
+a:hover,
+button:hover{
+  background: var(--primary-light);
+  color: #050801;
+  box-shadow: 0 0 5px var(--primary-light),
+              0 0 25px var(--primary-light),
+              0 0 50px var(--primary-light),
+              0 0 200px var(--primary-light);
+  -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+a span,
+button span{
+  position: absolute;
+  display: block;
+}
+a span:nth-child(1),
+button span:nth-child(1){
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,var(--primary-light));
+  animation: animate1 1s linear infinite;
+  transform: translate3d(-100%, 0, 0);
+}
+// a:hover span:nth-child(1),
+// button:hover span:nth-child(1){
+//   animation: animate1 1s linear infinite reverse;
+// }
+@keyframes animate1{
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  50%, 100% {
+    transform: translate3d(100%, 0, 0);
+  }
+  // 0%{
+  //     left: -100%;
+  // }
+  // 50%,100%{
+  //     left: 100%;
+  // }
+}
+a span:nth-child(2),
+button span:nth-child(2){
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,var(--primary-light));
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+  transform: translate3d(0, -100%, 0);
+}
+@keyframes animate2{
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  50%, 100% {
+    transform: translate3d(0, 100%, 0);
+  }
+
+  // 0%{
+  //     top: -100%;
+  // }
+  // 50%,100%{
+  //     top: 100%;
+  // }
+}
+a span:nth-child(3),
+button span:nth-child(3){
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,var(--primary-light));
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.50s;
+  transform: translate3d(100%, 0, 0);
+}
+@keyframes animate3{
+  // 0%{
+  //     right: -100%;
+  // }
+  // 50%,100%{
+  //     right: 100%;
+  // }
+
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+  50%, 100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+
+a span:nth-child(4),
+button span:nth-child(4){
+  bottom: 0%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,var(--primary-light));
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+  transform: translate3d(0, 100%, 0);
+}
+@keyframes animate4{
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  50%, 100% {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  // 0%{
+  //     bottom: -100%;
+  // }
+  // 50%,100%{
+  //     bottom: 100%;
+  // }
+}
+
+/* Colors */
+$colors:
+  "red" --red-color-light,
+  "orange" --orange-color-light,
+  "yellow" --yellow-color-light,
+  "green" --green-color-light,
+  "blue" --blue-color-light,
+  "neon" --neon-color-light,
+  "purple" --purple-color-light,
+  "black" --black-color-light;
+
+@each $i in $colors{
+  a.#{nth($i, 1)},
+  button.#{nth($i, 1)} {
+    color: var(nth($i, 2));
+    
+    &:hover {
+    background: var(nth($i, 2));
+    color: black;
+    box-shadow: 0 0 5px var(nth($i, 2)),
+                0 0 25px var(nth($i, 2)),
+                0 0 50px var(nth($i, 2)),
+                0 0 200px var(nth($i, 2));
+    }
+    span:nth-child(1){
+      background: linear-gradient(90deg,transparent,var(nth($i, 2)));
+    }
+    span:nth-child(2){
+      background: linear-gradient(180deg,transparent,var(nth($i, 2)));
+    }
+    span:nth-child(3){
+      background: linear-gradient(270deg,transparent,var(nth($i, 2)));
+    }
+    span:nth-child(4){
+      background: linear-gradient(360deg,transparent,var(nth($i, 2)));
+    }
+  }
+}
+

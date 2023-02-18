@@ -1,0 +1,176 @@
+
+@import url('../../variables.css');
+
+:root {
+    --ui-opacity: 0.2;
+    --ui-border-thickness: 2px;
+}
+
+
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  
+  .box{
+	position: relative;
+	display: flex;
+	/* background: #060c21; */
+	/* background: linear-gradient(180deg, var(--primary-dark), black); */
+	/* margin: 40px; */
+
+    border: 1px solid var(--primary);
+
+    animation: flicker-border 10s infinite alternate;
+
+    margin: 3%;
+
+    background: repeating-linear-gradient(
+        180deg,
+        transparent,
+        transparent 2px,
+        #000 2px,
+        #000 4px
+    ),
+    linear-gradient(
+        to bottom,
+        var(--primary-xdark),
+        #000
+
+        /* rgba(var(--primary-dark-rgb), 0.3),
+        rgba(0, 0, 0, 0.3) */
+    )
+}
+.box:before{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	z-index: -1;
+}
+.box:after{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	z-index: -2;
+	filter: blur(40px);
+}
+.box:before, .box:after {
+	background: linear-gradient(235deg, var(--primary), #010615, var(--primary));
+}
+
+	/* background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+	background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+	background: linear-gradient(235deg, #772aff, #010615, #2196F3); */
+
+.box .content{
+	padding: 20px;
+    width: 100%;
+}
+
+@keyframes flicker-border {
+    0% {
+        border-color: rgba(var(--primary-rgb), 1);
+    }
+    30% {
+        border-color: rgba(var(--primary-rgb), 0.7);
+    }
+    70% {
+        border-color: rgba(var(--primary-rgb), 0.7);
+    }
+    100% {
+        border-color: rgba(var(--primary-rgb), 1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.asection-wrap {
+    filter: drop-shadow(-1px 6px 3px rgba(var(--blue-color-light-rgb), 1));
+}
+
+asection {
+    /* background-color: rgba(var(--blue-color-dark-rgb), var(--ui-opacity)); */
+    padding: var(--padding);
+    /* outline: 2px solid rgba(var(--blue-color-light-rgb), 1); */
+    /* box-shadow:0 0 10px ; */
+
+    background-color: transparent;
+    outline: transparent;
+    clip-path: var(--clip);
+    position: relative;
+}
+
+asection:after,
+asection:before {
+  --container-clip: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 70%);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  clip-path: var(--container-clip);
+  z-index: 0;
+}
+
+asection:before {
+  background: var(--primary-dark);
+  transform: translate(var(--border), 0);
+
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;  
+}
+
+asection:after {
+  /* background: var(--primary); */
+}
+
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(var(--blue-color-dark-rgb), 0.1);
+    }
+    30% {
+        background-color: rgba(var(--blue-color-dark-rgb), 0.2);
+    }
+    70% {
+        background-color: rgba(var(--blue-color-dark-rgb), 0.2);
+    }
+    100% {
+        background-color: rgba(var(--blue-color-dark-rgb), 0.1);
+    }
+}
+

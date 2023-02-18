@@ -1,0 +1,88 @@
+@import url('../../variables.css');
+
+:root {
+  --anim-duration: 0.5s;
+}
+
+.heading-wrap {
+  display: flex;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Cyber', sans-serif;
+  /* color: var(--primary-light); */
+  position: relative;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 4.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+
+.glow {
+  text-shadow: 2px 2px 5px var(--primary-light);
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 2px rgba(var(--primary-light-rgb), 0.3), 0 0 4px rgba(var(--primary-light-rgb), 0.3),
+      0 0 6px rgba(var(--primary-light-rgb), 0.3), 0 0 8px rgba(var(--primary-light-rgb), 0.3),
+      0 0 10px rgba(var(--primary-light-rgb), 0.3), 0 0 12px rgba(var(--primary-light-rgb), 0.3),
+      0 0 14px rgba(var(--primary-light-rgb), 0.3);
+  }
+  100% {
+    text-shadow: 0 0 4px rgba(var(--primary-light-rgb), 0.3), 0 0 6px rgba(var(--primary-light-rgb), 0.3),
+      0 0 8px rgba(var(--primary-light-rgb), 0.3), 0 0 10px rgba(var(--primary-light-rgb), 0.3),
+      0 0 12px rgba(var(--primary-light-rgb), 0.3), 0 0 14px rgba(var(--primary-light-rgb), 0.3),
+      0 0 16px rgba(var(--primary-light-rgb), 0.3);
+  }
+}
+
+
+
+.typed {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+/* border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+/*  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 5px; /* Adjust as needed */
+  animation: 
+    typing 3s steps(28, end);
+    /* blink-caret .75s step-end infinite; */
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}

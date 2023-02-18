@@ -1,0 +1,63 @@
+
+@import url('../../../variables.css');
+
+.asection-wrap {
+    filter: drop-shadow(-1px 6px 3px rgba(var(--blue-color-light-rgb), 1));
+}
+
+.asection {
+    /* background-color: rgba(var(--blue-color-dark-rgb), var(--ui-opacity)); */
+    padding: var(--padding);
+    /* outline: 2px solid rgba(var(--blue-color-light-rgb), 1); */
+    /* box-shadow:0 0 10px ; */
+
+    background-color: transparent;
+    outline: transparent;
+    clip-path: var(--clip);
+    position: relative;
+}
+
+.asection:after,
+.asection:before {
+  --container-clip: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 70%);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  clip-path: var(--container-clip);
+  z-index: 0;
+  outline: 2px solid var(--primary-light);
+}
+
+.asection:before {
+  background: var(--primary-dark);
+  transform: translate(var(--border), 0);
+
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;  
+}
+
+.asection:after {
+  /* background: var(--primary); */
+}
+
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(var(--primary-light-rgb), 1);
+    }
+    30% {
+        background-color: rgba(var(--primary-dark-rgb), 1);
+    }
+    70% {
+        background-color: rgba(var(--primary-dark-rgb), 1);
+    }
+    100% {
+        background-color: rgba(var(--primary-light-rgb), 1);
+    }
+}
+

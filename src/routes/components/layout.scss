@@ -1,0 +1,201 @@
+// // .layout {
+// //     width: 100%;
+// // }
+
+// header {
+//     height: 50px;
+//     z-index: 3;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+
+// .button-toggle-menu {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+    
+//     cursor: pointer;
+//     font-size: 25px;
+//     padding: 10px 20px;
+//   }
+  
+//   .overlay {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     opacity: 0;
+//     pointer-events: none;
+//     transition: 0.3s opacity ease-in-out;
+//   }
+  
+//   .toggle-menu {
+//     appearance: none;
+  
+//     &:checked {
+//       ~ nav {
+//         transform: translateX(0);
+//       }
+      
+//       ~ .overlay {
+//         pointer-events: initial;
+//         opacity: 1;
+//       }
+//     }
+//   }
+  
+//   nav {
+//     background-color: var(--primary-xdark);
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 30%;
+//     transform: translateX(-100%);
+//     will-change: transform;
+//     transition: .3s transform linear;
+//     z-index: 10;
+    
+//     ul {
+//       list-style: none;
+//       padding: 20px 0;
+//       margin: 0;
+      
+//       li {
+//         padding: 10px 20px;
+//       }
+//     }
+//   }
+
+.section-main {
+    display: flex;
+    flex-wrap: wrap;
+
+    .section-left {
+        flex: 25%;
+    }
+
+    .section-right {
+        flex: 75%;
+    }
+}
+
+
+
+
+
+// @import url('../../variables.css');
+
+// .theme-color-blue * {
+
+// }
+// .theme-color-red {
+//     --primary: var(--red-color);
+//     --primary-light: var(--red-color-light);
+//     --primary-dark: var(--red-color-dark);
+//     --primary-xdark: var(--red-color-xdark);
+//     --primary-rgb: var(--red-color-rgb);
+//     --primary-xlight-rgb: var(--red-color-xlight-rgb);
+//     --primary-light-rgb: var(--red-color-light-rgb);
+//     --primary-dark-rgb: var(--red-color-dark-rgb);
+//     --primary-xdark-rgb: var(--red-color-xdark-rgb);
+
+//     color: var(--primary-light);
+// }
+
+// .theme-color-orange {
+//     --primary: var(--orange-color);
+//     --primary-light: var(--orange-color-light);
+//     --primary-dark: var(--orange-color-dark);
+//     --primary-xdark: var(--orange-color-xdark);
+//     --primary-rgb: var(--orange-color-rgb);
+//     --primary-xlight-rgb: var(--orange-color-xlight-rgb);
+//     --primary-light-rgb: var(--orange-color-light-rgb);
+//     --primary-dark-rgb: var(--orange-color-dark-rgb);
+//     --primary-xdark-rgb: var(--orange-color-xdark-rgb);
+
+//     color: var(--primary-light);
+// }
+
+// .theme-color-yellow {
+//     --primary: var(--yellow-color);
+//     --primary-light: var(--yellow-color-light);
+//     --primary-dark: var(--yellow-color-dark);
+//     --primary-xdark: var(--yellow-color-xdark);
+//     --primary-rgb: var(--yellow-color-rgb);
+//     --primary-xlight-rgb: var(--yellow-color-xlight-rgb);
+//     --primary-light-rgb: var(--yellow-color-light-rgb);
+//     --primary-dark-rgb: var(--yellow-color-dark-rgb);
+//     --primary-xdark-rgb: var(--yellow-color-xdark-rgb);
+
+//     color: var(--primary-light);
+// }
+
+// .theme-color-green {
+//     --primary: var(--green-color);
+//     --primary-light: var(--green-color-light);
+//     --primary-dark: var(--green-color-dark);
+//     --primary-xdark: var(--green-color-xdark);
+//     --primary-rgb: var(--green-color-rgb);
+//     --primary-xlight-rgb: var(--green-color-xlight-rgb);
+//     --primary-light-rgb: var(--green-color-light-rgb);
+//     --primary-dark-rgb: var(--green-color-dark-rgb);
+//     --primary-xdark-rgb: var(--green-color-xdark-rgb);
+
+//     color: var(--primary-light);
+// }
+
+// .theme-color-blue {
+//     --primary: var(--blue-color);
+//     --primary-light: var(--blue-color-light);
+//     --primary-dark: var(--blue-color-dark);
+//     --primary-xdark: var(--blue-color-xdark);
+//     --primary-rgb: var(--blue-color-rgb);
+//     --primary-xlight-rgb: var(--blue-color-xlight-rgb);
+//     --primary-light-rgb: var(--blue-color-light-rgb);
+//     --primary-dark-rgb: var(--blue-color-dark-rgb);
+//     --primary-xdark-rgb: var(--blue-color-xdark-rgb);
+
+//     color: var(--primary-light);
+// }
+
+// .theme-color-neon {
+//     --primary: var(--neon-color);
+//     --primary-light: var(--neon-color-light);
+//     --primary-dark: var(--neon-color-dark);
+//     --primary-xdark: var(--neon-color-xdark);
+//     --primary-rgb: var(--neon-color-rgb);
+//     --primary-xlight-rgb: var(--neon-color-xlight-rgb);
+//     --primary-light-rgb: var(--neon-color-light-rgb);
+//     --primary-dark-rgb: var(--neon-color-dark-rgb);
+//     --primary-xdark-rgb: var(--neon-color-xdark-rgb);
+
+//     color: var(--primary-light);
+// }
+
+// .theme-color-purple {
+//     --primary: var(--purple-color);
+//     --primary-light: var(--purple-color-light);
+//     --primary-dark: var(--purple-color-dark);
+//     --primary-xdark: var(--purple-color-xdark);
+//     --primary-rgb: var(--purple-color-rgb);
+//     --primary-xlight-rgb: var(--purple-color-xlight-rgb);
+//     --primary-light-rgb: var(--purple-color-light-rgb);
+//     --primary-dark-rgb: var(--purple-color-dark-rgb);
+//     --primary-xdark-rgb: var(--purple-color-xdark-rgb);
+
+//     color: var(--primary-light);
+// }
+
+// .theme-color-black {
+//     --primary: var(--black-color);
+//     --primary-light: var(--black-color-light);
+//     --primary-dark: var(--black-color-dark);
+//     --primary-xdark: var(--black-color-xdark);
+//     --primary-rgb: var(--black-color-rgb);
+//     --primary-xlight-rgb: var(--black-color-xlight-rgb);
+//     --primary-light-rgb: var(--black-color-light-rgb);
+//     --primary-dark-rgb: var(--black-color-dark-rgb);
+//     --primary-xdark-rgb: var(--black-color-xdark-rgb);
+
+//     color: var(--primary-light);
+// }

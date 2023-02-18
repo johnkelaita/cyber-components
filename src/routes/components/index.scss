@@ -1,0 +1,22 @@
+/* .twocol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+ */
+
+ .two-col {
+  display: flex;
+  flex-wrap: wrap;
+    align-content: stretch;
+
+  .box-left {
+    flex: 50%;
+    flex-grow: 1;
+  }
+
+  .box-right {
+    flex: 50%;
+    flex-grow: 1;
+  }
+}

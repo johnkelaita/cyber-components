@@ -1,0 +1,15 @@
+@import url('../../variables.css');
+
+.caret {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;  
+}
+
+@keyframes blink {
+  0% { visibility: hidden; }
+  50% { visibility: hidden; }
+  51% { visibility: visible; }
+  100% { visibility: visible; }
+}

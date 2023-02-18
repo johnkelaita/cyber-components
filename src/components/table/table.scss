@@ -1,0 +1,67 @@
+// @import "~bootstrap/dist/css/bootstrap.css";
+// @import "~bootstrap/dist/css/bootstrap-grid.css";
+// @import "~bootstrap/dist/css/bootstrap-utilities.css";
+@import url('../../variables.css');
+
+:root {
+    --table-margin: 5px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+}
+
+.table td,
+.table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    // margin: var(--table-margin);
+    // border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    // border-bottom: 2px solid #dee2e6;
+
+    //padding: 10px;
+    background: linear-gradient(180deg, rgba(var(--primary-dark-rgb), 1) 0%, rgba(var(--primary-rgb), 1) 100%);
+}
+
+
+.table-striped {
+    // border-collapse: collapse;
+    // border-spacing: 0;
+    // width: 100%;
+    // border: 1px solid #ddd;
+}
+
+.table-striped tr:nth-child(even) {
+    background-color: rgba(var(--primary-dark-rgb), 0.3);
+}
+
+.table-striped th, .table-striped td {
+    text-align: left;
+    // padding: 16px;
+}
+
+.table-striped th {
+    // background-color: #4CAF50;
+    // color: white;
+}
+
+.table tr:hover {
+    background-color: rgba(var(--primary-dark-rgb), 1);
+    animation: hoverIn 0.5s;
+}
+
+@keyframes hoverIn {
+    0% {
+        background-color: rgba(var(--primary-dark-rgb), 0.3);
+    }
+    100% {
+        background-color: rgba(var(--primary-dark-rgb), 1);
+    }
+}

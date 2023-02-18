@@ -1,0 +1,51 @@
+
+@import url('../../../variables.css');
+
+.text-input {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.text-input * {
+    --form-textinput-font-size: 1.2rem;
+}
+
+.text-input label, .text-input input {
+    font-family: var(--font-family);
+}
+
+.labelled {
+    grid-template-rows: 1fr 2fr;
+}
+
+.text-input label {
+    font-size: var(--form-textinput-font-size);
+}
+
+.text-input input:focus {
+    filter: drop-shadow(0px 0px 5px rgba(var(--blue-color-light-rgb), 1));
+}
+
+.text-input input {
+
+    padding: var(--padding-small);
+    border: 1px solid var(--primary-light);
+    font-size: var(--form-textinput-font-size);
+    text-shadow: 0px 0px 5px rgba(var(--primary-light-rgb), 0.4);
+    color:rgba(var(--primary-light-rgb), 1);
+
+    background-color: transparent;
+    outline: transparent;
+    clip-path: var(--clip);
+    position: relative;
+
+    caret: underscore;
+}
+
+.text-input input::placeholder {
+    color: rgba(var(--primary-rgb), 1);
+}
+
+.text-input input:focus::placeholder {
+    opacity:  0;
+}

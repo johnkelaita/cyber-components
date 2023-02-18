@@ -1,0 +1,146 @@
+@import url('../../variables.css');
+
+:root {
+  --anim-duration: 0.5s;
+  --line-height: 1px;
+}
+
+.horizontal-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  overflow: hidden;
+  position: relative;
+  margin: 20px 0;
+}
+
+
+
+.under:after,
+.under:after,
+.under:after,
+.under:after,
+.under:after {
+  content: " ";
+
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: var(--primary);
+  z-index: 0;
+  /* clip-path: polygon(0 0, 0% 100%, 100% 100%, 100 0%); */
+}
+
+
+.underline {
+  position: absolute;
+  display: block;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg,transparent,var(--primary-light));
+  animation: glistenRight 1s linear infinite;
+  z-index: 1;
+}
+@keyframes glistenRight {
+  0% {
+      left: -100%;
+  }
+  50%,100%{
+      left: 100%;
+  }
+}
+@keyframes glistenLeft {
+  0% {
+      left: 100%;
+  }
+  50%,100%{
+      left: -100%;
+  }
+}
+
+.underline:nth-child(2) {
+  animation: glistenLeft 1s linear infinite;
+  background: linear-gradient(270deg,transparent,var(--primary-light));
+  animation-delay: 0.5s;
+}
+
+
+
+
+
+
+.size-1 {
+  height: 1px;
+  .underline {
+    height: 1px;
+  }
+  .under:after {
+    height: 1px;
+  }
+}
+
+.size-2 {
+  height: 2px;
+  .underline {
+    height: 2px;
+  }
+  .under:after {
+    height: 2px;
+  }
+}
+
+.size-3 {
+  height: 3px;
+  .underline {
+    height: 3px;
+  }
+  .under:after {
+    height: 3px;
+  }
+}
+
+.size-4 {
+  height: 4px;
+  .underline {
+    height: 4px;
+  }
+  .under:after {
+    height: 4px;
+  }
+}
+
+.size-5 {
+  height: 5px;
+  .underline {
+    height: 5px;
+  }
+  .under:after {
+    height: 5px;
+  }
+}
+
+
+
+
+
+
+.pulse {
+  .under:after {
+    background: rgba(var(--primary-light-rgb), 1);
+    animation: pulsing 1s linear infinite;
+  }
+}
+@keyframes pulsing {
+  0% {
+    background: rgba(var(--primary-light-rgb), 1);
+  }
+  50% {
+    background: rgba(var(--primary-light-rgb), 0.6);
+  }
+}
