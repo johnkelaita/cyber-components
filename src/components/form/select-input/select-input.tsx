@@ -1,4 +1,4 @@
-import { component$, QwikChangeEvent, Slot, useSignal, useStylesScoped$ } from '@builder.io/qwik';
+import { component$, useStylesScoped$ } from '@builder.io/qwik';
 import styles from './select-input.scss?inline';
 
 export interface InputItemSchema {
@@ -17,8 +17,6 @@ interface SelectInputProps {
 
 export const SelectInput = component$((props: SelectInputProps) => {
   useStylesScoped$(styles);
-
-  const inputValue = useSignal(props.value);
 
   return (
     <div class={`select-input ${props.label ? `labelled` : ``}`}>

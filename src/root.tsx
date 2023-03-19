@@ -3,7 +3,7 @@ import { QwikCityProvider, RouterOutlet, ServiceWorkerRegister } from '@builder.
 import { RouterHead } from './components/router-head/router-head';
 
 import './global.scss';
-import { defaultUserPrefs, getUserPrefs, UserPrefs } from './lib/store/userPrefs';
+import { defaultUserPrefs, getUserPrefs } from './lib/store/userPrefs';
 
 export const AppContext = createContext('component-library-context');
 
@@ -16,11 +16,11 @@ export default component$(() => {
    */
 
   // Create some reactive storage
-  let state = useStore(defaultUserPrefs);
+  const state: any = useStore(defaultUserPrefs);
   useContextProvider(AppContext, state);
 
   useClientEffect$(() => {
-    let userPrefs = getUserPrefs();
+    const userPrefs: any = getUserPrefs();
     state.color = userPrefs.color;
   });
 

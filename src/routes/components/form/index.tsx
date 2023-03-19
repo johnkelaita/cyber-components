@@ -1,11 +1,8 @@
 import { component$ } from '@builder.io/qwik';
-import { DocumentHead, Link } from '@builder.io/qwik-city';
+import { DocumentHead } from '@builder.io/qwik-city';
 import { Button } from '~/components/button/button';
-import { Caret } from '~/components/caret/caret';
 import { Container } from '~/components/container/container';
 import { Heading } from '~/components/heading/heading';
-import { faker } from '@faker-js/faker';
-import { BoxOutline } from '~/components/box/outline/box';
 import { HorizontalLine } from '~/components/horizontal-line/horizontal-line';
 import { TextInput } from '~/components/form/text-input/text-input';
 import { TextAreaInput } from '~/components/form/text-area-input/text-area-input';
@@ -13,13 +10,6 @@ import { InputItemSchema, SelectInput } from '~/components/form/select-input/sel
 import { Checkbox } from '~/components/form/checkbox/checkbox';
 
 export default component$(() => {
-  const tableData1 = new Array(10).fill(0).map((item: any) => ({
-    name: faker.name.fullName(), // Rowan Nikolaus
-    email: faker.internet.email(), // Kassandra.Haley@erich.biz
-    title: faker.name.jobTitle(), // National Markets Officer
-    pic: faker.image.avatar() // https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg
-  }));
-
   const optionsData: InputItemSchema[] = [
     {text: 'Option 1', value: "1"},
     {text: 'Option 2', value: "2"},
@@ -28,10 +18,8 @@ export default component$(() => {
     {text: 'Option 5', value: "5"}
   ];
 
-  const currentColor: "red" | "orange" | "bottom" = "blue";
-
   return (
-    <Container color={currentColor}>
+    <Container>
       <Heading glow>Form Elements</Heading>
 
       <p>A collection of headings, equivalent to html &lt;h1&gt; to &lt;h5&gt; tags.</p>
@@ -54,7 +42,7 @@ export default component$(() => {
 
       <Checkbox label="Accept the terms" />
 
-      <Button onClick$={(event) => alert('Hello Qwik Event!')} text="Submit" />
+      <Button onClick$={() => alert('Hello Qwik Event!')} text="Submit" />
 
 
     </Container>

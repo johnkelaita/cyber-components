@@ -1,4 +1,4 @@
-import { component$, Slot, useStylesScoped$ } from '@builder.io/qwik';
+import { component$, useStylesScoped$ } from '@builder.io/qwik';
 import styles from './caret.css?inline';
 
 interface CaretProps {

@@ -4,7 +4,6 @@ import { AppContext } from '~/root';
 import { ThemeColors } from '~/routes/layout';
 import { SelectInput } from '../form/select-input/select-input';
 import { Heading } from '../heading/heading';
-import { QwikLogo } from '../icons/qwik';
 import styles from './header.scss?inline';
 
 export default component$(() => {

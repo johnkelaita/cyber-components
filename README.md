@@ -1,4 +1,16 @@
-# Qwik City App ⚡️
+# Qwik Cyber Components
+
+This repository contains some theme components built using QwikJS. These are not ready for production, there are issues with performance when using multiple components and nothing has been tested in any production environment.
+
+They have been developed as both a learning experience for QwikJS and a set of components intended to be used across a different project.
+
+Enjoy!
+
+## Project in development. Use in production at own risk
+
+---
+
+## Qwik City App ⚡️
 
 - [Qwik Docs](https://qwik.builder.io/)
 - [Discord](https://qwik.builder.io/chat)
@@ -62,4 +74,10 @@ The production build will generate client and server modules by running both cli
 
 ```shell
 npm run build # or `yarn build`
+```
+
+## Static Site Generator (Node.js)
+
+```
+npm run build.server
 ```

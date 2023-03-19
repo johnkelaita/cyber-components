@@ -1,27 +1,14 @@
 import { component$ } from '@builder.io/qwik';
-import { DocumentHead, Link } from '@builder.io/qwik-city';
-import { Button } from '~/components/button/button';
+import { DocumentHead } from '@builder.io/qwik-city';
 import { Caret } from '~/components/caret/caret';
 import { Container } from '~/components/container/container';
 import { Heading } from '~/components/heading/heading';
-import { faker } from '@faker-js/faker';
 import { BoxOutline } from '~/components/box/outline/box';
 import { HorizontalLine } from '~/components/horizontal-line/horizontal-line';
 
 export default component$(() => {
-  const tableData1 = new Array(10).fill(0).map((item: any) => ({
-    name: faker.name.fullName(), // Rowan Nikolaus
-    email: faker.internet.email(), // Kassandra.Haley@erich.biz
-    title: faker.name.jobTitle(), // National Markets Officer
-    pic: faker.image.avatar() // https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg
-  }));
-
-  console.log(tableData1);
-
-  const currentColor: "red" | "orange" | "bottom" = "blue";
-
   return (
-    <Container color={currentColor}>
+    <Container>
       <Heading glow>Headings</Heading>
 
       <p>A collection of headings, equivalent to html &lt;h1&gt; to &lt;h5&gt; tags.</p>

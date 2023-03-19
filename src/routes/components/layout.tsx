@@ -1,6 +1,5 @@
-import { component$, Slot, createContext, useStore, useContextProvider, useStylesScoped$, useContext } from '@builder.io/qwik';
-import { loader$ } from '@builder.io/qwik-city';
-import { Heading } from '~/components/heading/heading';
+import { component$, Slot, useStylesScoped$, useContext } from '@builder.io/qwik';
+import { Link, loader$ } from '@builder.io/qwik-city';
 import { HorizontalLine } from '~/components/horizontal-line/horizontal-line';
 import { AppContext } from '~/root';
 
@@ -18,7 +17,6 @@ export const ThemeColors = ['blue', 'red', 'green', 'yellow', 'purple', 'orange'
 
 export default component$(() => {
   useStylesScoped$(styles);
-  const serverTime = serverTimeLoader.use();
   const state: any = useContext(AppContext);
 
   return (
@@ -28,15 +26,15 @@ export default component$(() => {
         <section class="section-left">
           <nav class="side__content">
             <ul class="side__list">
-              <li><a href="/components">Intro</a></li>
+              <li><Link href="/components">Intro</Link></li>
               <li><HorizontalLine style="pulse" /></li>
-              <li><a href="/components/box">Boxes</a></li>
-              <li><a href="/components/buttons">Buttons</a></li>
-              <li><a href="/components/container">Containers</a></li>
-              <li><a href="/components/form">Form</a></li>
-              <li><a href="/components/horizontal-lines">Horizontal</a></li>
-              <li><a href="/components/tables">Tables</a></li>
-              <li><a href="/components/typography">Typography</a></li>
+              <li><Link href="/components/box">Boxes</Link></li>
+              <li><Link href="/components/buttons">Buttons</Link></li>
+              <li><Link href="/components/container">Containers</Link></li>
+              <li><Link href="/components/form">Form</Link></li>
+              <li><Link href="/components/horizontal-lines">Horizontal</Link></li>
+              <li><Link href="/components/tables">Tables</Link></li>
+              <li><Link href="/components/typography">Typography</Link></li>
             </ul>
           </nav>
         </section>

@@ -1,26 +1,12 @@
 import { component$ } from '@builder.io/qwik';
-import { DocumentHead, Link } from '@builder.io/qwik-city';
-import { Button } from '~/components/button/button';
-import { Caret } from '~/components/caret/caret';
+import { DocumentHead } from '@builder.io/qwik-city';
 import { Container } from '~/components/container/container';
 import { Heading } from '~/components/heading/heading';
-import { faker } from '@faker-js/faker';
 import { HorizontalLine } from '~/components/horizontal-line/horizontal-line';
 
 export default component$(() => {
-  const tableData1 = new Array(10).fill(0).map((item: any) => ({
-    name: faker.name.fullName(), // Rowan Nikolaus
-    email: faker.internet.email(), // Kassandra.Haley@erich.biz
-    title: faker.name.jobTitle(), // National Markets Officer
-    pic: faker.image.avatar() // https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg
-  }));
-
-  console.log(tableData1);
-
-  const currentColor: "red" | "orange" | "bottom" = "blue";
-
   return (
-    <Container color={currentColor}>
+    <Container>
       <Heading glow>Horizontal Lines</Heading>
 
       <p>Size 1 and default</p>

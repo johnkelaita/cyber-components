@@ -1,4 +1,4 @@
-import { component$, Slot, useSignal, useStylesScoped$ } from '@builder.io/qwik';
+import { component$, useSignal, useStylesScoped$ } from '@builder.io/qwik';
 import styles from './text-area-input.css?inline';
 
 interface TextAreaInputProps {

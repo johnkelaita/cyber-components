@@ -1,10 +1,7 @@
 import { component$, useContext } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Button } from '~/components/button/button';
-import { Caret } from '~/components/caret/caret';
 import { Container } from '~/components/container/container';
 import { Heading } from '~/components/heading/heading';
-import { faker } from '@faker-js/faker';
 import { BoxOutline } from '~/components/box/outline/box';
 import { BoxPulse } from '~/components/box/pulse/box';
 import { HorizontalLine } from '~/components/horizontal-line/horizontal-line';
@@ -14,7 +11,7 @@ export default component$(() => {
   const state: any = useContext(AppContext);
 
   return (
-    <Container color={state.color}>
+    <Container>
       <Heading glow>Box</Heading>
 
       <p>This should be used to create boxes with effects.</p>

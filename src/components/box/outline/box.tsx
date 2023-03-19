@@ -12,6 +12,6 @@ export const BoxOutline = component$((props: BoxProps) => {
   return (
     <div class={`asection ${props.filled ? `filled` : ``}  ${props.type == 'flat' ? `flat` : ``}`}>
       <Slot />
-	  </div>
+    </div>
   );
 });
